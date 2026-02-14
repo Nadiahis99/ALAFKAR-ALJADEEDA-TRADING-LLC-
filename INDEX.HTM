@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALAFKAR ALJADEEDA TRADING LLC - New Ideas Trading | Dubai, UAE</title>
+    <meta name="description" content="ALAFKAR ALJADEEDA TRADING LLC - Professional wholesale trading in fabrics, clothing, and cosmetics. Licensed by Dubai Department of Economy & Tourism.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #0a2540;
+            --secondary-navy: #1a3a5c;
+            --accent-gold: #d4af37;
+            --accent-light-gold: #f0e6d2;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a5568;
+            --text-light: #718096;
+            --bg-white: #ffffff;
+            --bg-off-white: #fafbfc;
+            --bg-light: #f7f9fb;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 2px 8px rgba(10, 37, 64, 0.08);
+            --shadow-md: 0 4px 20px rgba(10, 37, 64, 0.12);
+            --shadow-lg: 0 8px 40px rgba(10, 37, 64, 0.16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: var(--bg-white);
+            overflow-x: hidden;
+        }
+
+        html[lang="ar"] {
+            direction: rtl;
+        }
+
+        html[lang="ar"] body {
+            font-family: 'Outfit', 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--primary-navy);
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+        h4 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+    .nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem; /* أقل = شكل أنضف */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Fix */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 120px;        /* حجم متوازن مع الهيدر */
+    width: auto;
+    max-width: 180px;    /* يمنع تمدد اللوجو */
+    object-fit: contain;
+    display: block;
+}
+
+
+    .logo-main {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            letter-spacing: 0.5px;
+        }
+
+        .logo-sub {
+            font-size: 0.875rem;
+            color: var(--accent-gold);
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-gold);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .lang-switch {
+            background: var(--accent-gold);
+            color: var(--bg-white);
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .lang-switch:hover {
+            background: var(--primary-navy);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.75rem;
+            color: var(--primary-navy);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 90px;
+            min-height: 85vh;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.03;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.05) 35px, rgba(255,255,255,.05) 70px);
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            color: var(--bg-white);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-subtitle {
+            color: var(--accent-light-gold);
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+            font-weight: 300;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero-description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+            opacity: 0;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .badge-icon {
+            font-size: 2rem;
+        }
+
+        .badge-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .badge-label {
+            color: var(--accent-light-gold);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .badge-value {
+            color: var(--bg-white);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            from {
+                transform: translateY(30px);
+            }
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 6rem 2rem;
+        }
+
+        .section-alt {
+            background: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            color: var(--accent-gold);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-description {
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-medium);
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .about-card {
+            background: var(--bg-white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .about-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-light-gold));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-card p {
+            color: var(--text-medium);
+            line-height: 1.8;
+        }
+
+        /* Business Activities */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .activity-card {
+            position: relative;
+            background: var(--bg-white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .activity-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .activity-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(to top, rgba(10, 37, 64, 0.8), transparent);
+        }
+
+        .activity-content {
+            padding: 2.5rem;
+        }
+
+        .activity-title {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--primary-navy);
+        }
+
+        .activity-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .activity-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-medium);
+        }
+
+        .activity-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-white);
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--accent-light-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--accent-gold);
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: var(--text-medium);
+            line-height: 1.8;
+        }
+
+        /* Compliance Section */
+        .compliance-content {
+            background: var(--bg-white);
+            padding: 4rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            border-left: 6px solid var(--accent-gold);
+        }
+
+        .compliance-intro {
+            font-size: 1.2rem;
+            color: var(--text-medium);
+            margin-bottom: 3rem;
+            line-height: 1.9;
+        }
+
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .compliance-item {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .compliance-icon {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: var(--accent-light-gold);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+        }
+
+        .compliance-item h4 {
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .compliance-item p {
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        /* License Information */
+        .license-section {
+            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-navy));
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .license-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .license-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .license-header {
+            text-align: center;
+            color: var(--bg-white);
+            margin-bottom: 4rem;
+        }
+
+        .license-header h2 {
+            color: var(--bg-white);
+            margin-bottom: 1rem;
+        }
+
+        .license-header p {
+            color: var(--accent-light-gold);
+            font-size: 1.1rem;
+        }
+
+        .license-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .license-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .license-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .license-label {
+            color: var(--accent-light-gold);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .license-value {
+            color: var(--bg-white);
+            font-size: 1.3rem;
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: var(--accent-gold);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--bg-white);
+        }
+
+        .contact-details h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .contact-details p {
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        .contact-details a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: var(--bg-white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.25rem;
+            background: var(--accent-gold);
+            color: var(--bg-white);
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-navy);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .map-container {
+            margin-top: 4rem;
+            height: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-navy);
+            color: var(--bg-white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--bg-white);
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                flex-direction: column;
+                background: var(--bg-white);
+                width: 100%;
+                padding: 2rem;
+                box-shadow: var(--shadow-lg);
+                transition: left 0.3s ease;
+                align-items: flex-start;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 70vh;
+            }
+
+            .hero-badges {
+                flex-direction: column;
+            }
+
+            .activities-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .compliance-content {
+                padding: 2.5rem;
+            }
+
+            .license-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-container {
+                padding: 1rem;
+            }
+
+            .section {
+                padding: 4rem 1.5rem;
+            }
+
+            .hero-content {
+                padding: 3rem 1.5rem;
+            }
+
+            .about-card,
+            .activity-content,
+            .service-card {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 { font-size: 2.25rem; }
+            h2 { font-size: 1.875rem; }
+        }
+
+        /* RTL Adjustments */
+        html[lang="ar"] .nav-menu {
+            left: auto;
+            right: -100%;
+        }
+
+        html[lang="ar"] .nav-menu.active {
+            left: auto;
+            right: 0;
+        }
+
+        html[lang="ar"] .activity-list li {
+            padding-left: 0;
+            padding-right: 2rem;
+        }
+
+        html[lang="ar"] .activity-list li::before {
+            left: auto;
+            right: 0;
+        }
+
+        html[lang="ar"] .compliance-content {
+            border-left: none;
+            border-right: 6px solid var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+           <div class="logo">
+    <img src="لوجو الشركة.png" alt="ALAFKAR ALJADEEDA" class="logo-img">
+</div>
+
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="#about" class="nav-link" data-en="About Us" data-ar="من نحن">About Us</a></li>
+                <li><a href="#activities" class="nav-link" data-en="Business Activities" data-ar="أنشطتنا">Business Activities</a></li>
+                <li><a href="#services" class="nav-link" data-en="Services" data-ar="خدماتنا">Services</a></li>
+                <li><a href="#compliance" class="nav-link" data-en="Compliance" data-ar="الامتثال">Compliance</a></li>
+                <li><a href="#contact" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                <li><button class="lang-switch" onclick="toggleLanguage()" data-en="العربية" data-ar="English">العربية</button></li>
+            </ul>
+
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-en="Building Trust Through Quality Trade" data-ar="بناء الثقة من خلال التجارة عالية الجودة">
+                Building Trust Through Quality Trade
+            </h1>
+            <p class="hero-subtitle" data-en="Premium Wholesale Trading in Fabrics, Garments & Cosmetics" data-ar="تجارة الجملة المتميزة في الأقمشة والملابس ومستحضرات التجميل">
+                Premium Wholesale Trading in Fabrics, Garments & Cosmetics
+            </p>
+            <p class="hero-description" data-en="Licensed by Dubai Department of Economy & Tourism, ALAFKAR ALJADEEDA TRADING LLC delivers excellence in B2B trading solutions across the Middle East and beyond." data-ar="مرخصة من دائرة الاقتصاد والسياحة بدبي، توفر شركة الأفكار الجديدة للتجارة التميز في حلول تجارة الأعمال عبر الشرق الأوسط وخارجه.">
+                Licensed by Dubai Department of Economy & Tourism, ALAFKAR ALJADEEDA TRADING LLC delivers excellence in B2B trading solutions across the Middle East and beyond.
+            </p>
+            
+            <div class="hero-badges">
+                <div class="badge">
+                    <div class="badge-icon"></div>
+                    <div class="badge-content">
+                        <div class="badge-label" data-en="Established" data-ar="التأسيس">Established</div>
+                        <div class="badge-value">2023</div>
+                    </div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon"></div>
+                    <div class="badge-content">
+                        <div class="badge-label" data-en="License No." data-ar="رقم الرخصة">License No.</div>
+                        <div class="badge-value">1218525</div>
+                    </div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon"></div>
+                    <div class="badge-content">
+                        <div class="badge-label" data-en="Based in" data-ar="مقرها في">Based in</div>
+                        <div class="badge-value">Dubai, UAE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label" data-en="ABOUT US" data-ar="من نحن">ABOUT US</div>
+                <h2 class="section-title" data-en="Excellence in Wholesale Trading" data-ar="التميز في تجارة الجملة">Excellence in Wholesale Trading</h2>
+                <p class="section-description" data-en="ALAFKAR ALJADEEDA TRADING LLC is a Dubai-based trading company specializing in wholesale distribution of premium fabrics, garments, and cosmetics. We serve businesses and institutions with reliability, professionalism, and commitment to quality." data-ar="شركة الأفكار الجديدة للتجارة هي شركة تجارية مقرها دبي متخصصة في التوزيع بالجملة للأقمشة والملابس ومستحضرات التجميل الفاخرة. نخدم الشركات والمؤسسات بموثوقية واحترافية والتزام بالجودة.">
+                    ALAFKAR ALJADEEDA TRADING LLC is a Dubai-based trading company specializing in wholesale distribution of premium fabrics, garments, and cosmetics. We serve businesses and institutions with reliability, professionalism, and commitment to quality.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">🎯</div>
+                    <h3 data-en="Our Mission" data-ar="مهمتنا">Our Mission</h3>
+                    <p data-en="To provide exceptional wholesale trading services built on trust, quality, and long-term partnerships with our clients and suppliers across the global market." data-ar="تقديم خدمات تجارة جملة استثنائية مبنية على الثقة والجودة والشراكات طويلة الأمد مع عملائنا ومورّدينا في السوق العالمي.">
+                        To provide exceptional wholesale trading services built on trust, quality, and long-term partnerships with our clients and suppliers across the global market.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">👁️</div>
+                    <h3 data-en="Our Vision" data-ar="رؤيتنا">Our Vision</h3>
+                    <p data-en="To become a leading trading partner in the Middle East region, recognized for our integrity, professional standards, and commitment to excellence in every transaction." data-ar="أن نصبح شريكًا تجاريًا رائدًا في منطقة الشرق الأوسط، معترفًا بنزاهتنا ومعاييرنا المهنية والتزامنا بالتميز في كل معاملة.">
+                        To become a leading trading partner in the Middle East region, recognized for our integrity, professional standards, and commitment to excellence in every transaction.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">💎</div>
+                    <h3 data-en="Our Values" data-ar="قيمنا">Our Values</h3>
+                    <p data-en="Integrity, transparency, and professional excellence guide every aspect of our business. We maintain the highest standards of corporate governance and ethical business practices." data-ar="النزاهة والشفافية والتميز المهني توجه كل جانب من جوانب أعمالنا. نحافظ على أعلى معايير حوكمة الشركات وممارسات الأعمال الأخلاقية.">
+                        Integrity, transparency, and professional excellence guide every aspect of our business. We maintain the highest standards of corporate governance and ethical business practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Activities -->
+    <section class="section section-alt" id="activities">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label" data-en="BUSINESS ACTIVITIES" data-ar="الأنشطة التجارية">BUSINESS ACTIVITIES</div>
+                <h2 class="section-title" data-en="Our Core Trading Sectors" data-ar="قطاعاتنا التجارية الأساسية">Our Core Trading Sectors</h2>
+                <p class="section-description" data-en="We specialize in three key sectors, providing comprehensive wholesale and B2B solutions to businesses worldwide." data-ar="نتخصص في ثلاثة قطاعات رئيسية، ونوفر حلول جملة وحلول B2B شاملة للشركات في جميع أنحاء العالم.">
+                    We specialize in three key sectors, providing comprehensive wholesale and B2B solutions to businesses worldwide.
+                </p>
+            </div>
+
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-image" style="background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="activity-content">
+                        <h3 class="activity-title" data-en="Fabrics & Textiles" data-ar="الأقمشة والمنسوجات">Fabrics & Textiles</h3>
+                        <p data-en="Premium quality fabrics for commercial and industrial applications." data-ar="أقمشة فاخرة للتطبيقات التجارية والصناعية.">
+                            Premium quality fabrics for commercial and industrial applications.
+                        </p>
+                        <ul class="activity-list">
+                            <li data-en="Cotton & Synthetic Fabrics" data-ar="الأقمشة القطنية والصناعية">Cotton & Synthetic Fabrics</li>
+                            <li data-en="Luxury & Designer Materials" data-ar="المواد الفاخرة والمصممة">Luxury & Designer Materials</li>
+                            <li data-en="Industrial Textiles" data-ar="المنسوجات الصناعية">Industrial Textiles</li>
+                            <li data-en="Specialty Fabrics" data-ar="الأقمشة المتخصصة">Specialty Fabrics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image" style="background-image: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <div class="activity-content">
+                        <h3 class="activity-title" data-en="Garments & Apparel" data-ar="الملابس والأزياء">Garments & Apparel</h3>
+                        <p data-en="Wholesale clothing solutions for retailers and distributors." data-ar="حلول ملابس بالجملة لتجار التجزئة والموزعين.">
+                            Wholesale clothing solutions for retailers and distributors.
+                        </p>
+                        <ul class="activity-list">
+                            <li data-en="Ready-to-Wear Collections" data-ar="مجموعات الملابس الجاهزة">Ready-to-Wear Collections</li>
+                            <li data-en="Corporate & Uniform Wear" data-ar="الملابس الرسمية والزي الموحد">Corporate & Uniform Wear</li>
+                            <li data-en="Seasonal Fashion Lines" data-ar="خطوط الأزياء الموسمية">Seasonal Fashion Lines</li>
+                            <li data-en="Custom Orders" data-ar="الطلبات المخصصة">Custom Orders</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image" style="background-image: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                    <div class="activity-content">
+                        <h3 class="activity-title" data-en="Cosmetics & Beauty" data-ar="مستحضرات التجميل والعناية">Cosmetics & Beauty</h3>
+                        <p data-en="Quality cosmetics and beauty products for wholesale distribution." data-ar="منتجات تجميل وعناية عالية الجودة للتوزيع بالجملة.">
+                            Quality cosmetics and beauty products for wholesale distribution.
+                        </p>
+                        <ul class="activity-list">
+                            <li data-en="Skincare Products" data-ar="منتجات العناية بالبشرة">Skincare Products</li>
+                            <li data-en="Beauty & Makeup" data-ar="منتجات التجميل والمكياج">Beauty & Makeup</li>
+                            <li data-en="Personal Care Items" data-ar="منتجات العناية الشخصية">Personal Care Items</li>
+                            <li data-en="Professional Beauty Supplies" data-ar="مستلزمات التجميل المهنية">Professional Beauty Supplies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label" data-en="OUR SERVICES" data-ar="خدماتنا">OUR SERVICES</div>
+                <h2 class="section-title" data-en="Comprehensive Trading Solutions" data-ar="حلول تجارية شاملة">Comprehensive Trading Solutions</h2>
+                <p class="section-description" data-en="End-to-end B2B services designed to support your business growth and supply chain needs." data-ar="خدمات B2B شاملة مصممة لدعم نمو أعمالك واحتياجات سلسلة التوريد الخاصة بك.">
+                    End-to-end B2B services designed to support your business growth and supply chain needs.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📦</div>
+                    <h3 data-en="Wholesale Distribution" data-ar="التوزيع بالجملة">Wholesale Distribution</h3>
+                    <p data-en="Large-scale distribution services with competitive pricing and reliable delivery schedules for businesses of all sizes." data-ar="خدمات توزيع واسعة النطاق بأسعار تنافسية وجداول تسليم موثوقة للشركات من جميع الأحجام.">
+                        Large-scale distribution services with competitive pricing and reliable delivery schedules for businesses of all sizes.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3 data-en="Import & Export" data-ar="الاستيراد والتصدير">Import & Export</h3>
+                    <p data-en="International trade facilitation with expertise in customs, regulations, and cross-border logistics management." data-ar="تسهيل التجارة الدولية مع الخبرة في الجمارك واللوائح وإدارة الخدمات اللوجستية عبر الحدود.">
+                        International trade facilitation with expertise in customs, regulations, and cross-border logistics management.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🤝</div>
+                    <h3 data-en="B2B Supply Chain" data-ar="سلسلة التوريد B2B">B2B Supply Chain</h3>
+                    <p data-en="Dedicated supply chain solutions tailored to your business requirements with consistent quality and timely fulfillment." data-ar="حلول سلسلة توريد مخصصة مصممة لمتطلبات عملك مع جودة متسقة وتنفيذ في الوقت المناسب.">
+                        Dedicated supply chain solutions tailored to your business requirements with consistent quality and timely fulfillment.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3 data-en="Corporate Partnerships" data-ar="الشراكات المؤسسية">Corporate Partnerships</h3>
+                    <p data-en="Long-term partnership programs with customized terms, dedicated support, and strategic business collaboration." data-ar="برامج شراكة طويلة الأجل بشروط مخصصة ودعم متخصص وتعاون تجاري استراتيجي.">
+                        Long-term partnership programs with customized terms, dedicated support, and strategic business collaboration.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Section -->
+    <section class="section section-alt" id="compliance">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label" data-en="COMPLIANCE & GOVERNANCE" data-ar="الامتثال والحوكمة">COMPLIANCE & GOVERNANCE</div>
+                <h2 class="section-title" data-en="Committed to Regulatory Excellence" data-ar="ملتزمون بالتميز التنظيمي">Committed to Regulatory Excellence</h2>
+            </div>
+
+            <div class="compliance-content">
+                <p class="compliance-intro" data-en="ALAFKAR ALJADEEDA TRADING LLC operates with full commitment to UAE regulatory standards and international best practices. We maintain strict compliance protocols to ensure transparency, accountability, and ethical business conduct in all our operations." data-ar="تعمل شركة الأفكار الجديدة للتجارة بالتزام كامل بمعايير دولة الإمارات التنظيمية وأفضل الممارسات الدولية. نحافظ على بروتوكولات امتثال صارمة لضمان الشفافية والمساءلة والسلوك التجاري الأخلاقي في جميع عملياتنا.">
+                    ALAFKAR ALJADEEDA TRADING LLC operates with full commitment to UAE regulatory standards and international best practices. We maintain strict compliance protocols to ensure transparency, accountability, and ethical business conduct in all our operations.
+                </p>
+
+                <div class="compliance-grid">
+                    <div class="compliance-item">
+                        <div class="compliance-icon">🔒</div>
+                        <div>
+                            <h4 data-en="AML Compliance" data-ar="الامتثال لمكافحة غسيل الأموال">AML Compliance</h4>
+                            <p data-en="We adhere to Anti-Money Laundering regulations and maintain robust systems to prevent financial crimes and ensure transaction integrity." data-ar="نلتزم بلوائح مكافحة غسيل الأموال ونحافظ على أنظمة قوية لمنع الجرائم المالية وضمان سلامة المعاملات.">
+                                We adhere to Anti-Money Laundering regulations and maintain robust systems to prevent financial crimes and ensure transaction integrity.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="compliance-item">
+                        <div class="compliance-icon">✓</div>
+                        <div>
+                            <h4 data-en="KYC Procedures" data-ar="إجراءات التعرف على العميل">KYC Procedures</h4>
+                            <p data-en="Comprehensive Know Your Customer protocols ensure we conduct business with verified, legitimate partners while protecting all stakeholders." data-ar="تضمن بروتوكولات التعرف على العميل الشاملة أننا نجري أعمالًا مع شركاء موثوقين ومشروعين مع حماية جميع أصحاب المصلحة.">
+                                Comprehensive Know Your Customer protocols ensure we conduct business with verified, legitimate partners while protecting all stakeholders.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="compliance-item">
+                        <div class="compliance-icon">📋</div>
+                        <div>
+                            <h4 data-en="Corporate Governance" data-ar="حوكمة الشركات">Corporate Governance</h4>
+                            <p data-en="Our governance framework follows Dubai's regulatory requirements with transparent reporting, accountability, and ethical business practices." data-ar="يتبع إطار الحوكمة لدينا المتطلبات التنظيمية لدبي مع التقارير الشفافة والمساءلة وممارسات الأعمال الأخلاقية.">
+                                Our governance framework follows Dubai's regulatory requirements with transparent reporting, accountability, and ethical business practices.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="compliance-item">
+                        <div class="compliance-icon">🛡️</div>
+                        <div>
+                            <h4 data-en="Data Protection" data-ar="حماية البيانات">Data Protection</h4>
+                            <p data-en="We implement strict data security measures to protect client information and maintain confidentiality in accordance with UAE regulations." data-ar="ننفذ إجراءات أمنية صارمة لحماية معلومات العملاء والحفاظ على السرية وفقًا للوائح دولة الإمارات.">
+                                We implement strict data security measures to protect client information and maintain confidentiality in accordance with UAE regulations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- License Information Section -->
+    <section class="license-section">
+        <div class="license-container">
+            <div class="license-header">
+                <h2 data-en="Official License Information" data-ar="معلومات الترخيص الرسمية">Official License Information</h2>
+                <p data-en="Fully licensed and regulated by Dubai Department of Economy & Tourism" data-ar="مرخصة ومنظمة بالكامل من قبل دائرة الاقتصاد والسياحة بدبي">
+                    Fully licensed and regulated by Dubai Department of Economy & Tourism
+                </p>
+            </div>
+
+            <div class="license-grid">
+                <div class="license-card">
+                    <div class="license-label" data-en="Trade License Number" data-ar="رقم الرخصة التجارية">Trade License Number</div>
+                    <div class="license-value">1218525</div>
+                </div>
+                <div class="license-card">
+                    <div class="license-label" data-en="Licensing Authority" data-ar="جهة الترخيص">Licensing Authority</div>
+                    <div class="license-value" data-en="Dubai DET" data-ar="دائرة الاقتصاد دبي">Dubai DET</div>
+                </div>
+                <div class="license-card">
+                    <div class="license-label" data-en="Year Established" data-ar="سنة التأسيس">Year Established</div>
+                    <div class="license-value">2023</div>
+                </div>
+                <div class="license-card">
+                    <div class="license-label" data-en="Postal Code" data-ar="الرمز البريدي">Postal Code</div>
+                    <div class="license-value">379570</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label" data-en="CONTACT US" data-ar="اتصل بنا">CONTACT US</div>
+                <h2 class="section-title" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</h2>
+                <p class="section-description" data-en="We're here to discuss partnership opportunities and answer your business inquiries." data-ar="نحن هنا لمناقشة فرص الشراكة والإجابة على استفساراتك التجارية.">
+                    We're here to discuss partnership opportunities and answer your business inquiries.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4 data-en="Our Address" data-ar="عنواننا">Our Address</h4>
+                            <p data-en="Office 206, Alothman Building<br>Almurar, Dubai, UAE<br>Postal Code: 379570" data-ar="مكتب 206، مبنى العثمان<br>المرر، دبي، الإمارات<br>الرمز البريدي: 379570">
+                                Office 206, Alothman Building<br>
+                                Almurar, Dubai, UAE<br>
+                                Postal Code: 379570
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4 data-en="Phone" data-ar="الهاتف">Phone</h4>
+                            <p>
+                                <a href="tel:+97142543299">+971-4254-3299</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🏢</div>
+                        <div class="contact-details">
+                            <h4 data-en="License Information" data-ar="معلومات الترخيص">License Information</h4>
+                            <p data-en="License No: 1218525<br>Issued by: Dubai Department of Economy & Tourism" data-ar="رقم الرخصة: 1218525<br>صادرة عن: دائرة الاقتصاد والسياحة بدبي">
+                                License No: 1218525<br>
+                                Issued by: Dubai Department of Economy & Tourism
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div class="contact-details">
+                            <h4 data-en="Business Hours" data-ar="ساعات العمل">Business Hours</h4>
+                            <p data-en="Sunday - Thursday: 9:00 AM - 6:00 PM<br>Friday - Saturday: Closed" data-ar="الأحد - الخميس: 9:00 صباحًا - 6:00 مساءً<br>الجمعة - السبت: مغلق">
+                                Sunday - Thursday: 9:00 AM - 6:00 PM<br>
+                                Friday - Saturday: Closed
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3 data-en="Send Us a Message" data-ar="أرسل لنا رسالة">Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label data-en="Full Name *" data-ar="الاسم الكامل *">Full Name *</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-en="Company Name" data-ar="اسم الشركة">Company Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label data-en="Email Address *" data-ar="البريد الإلكتروني *">Email Address *</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
+                            <input type="tel">
+                        </div>
+                        <div class="form-group">
+                            <label data-en="Message *" data-ar="الرسالة *">Message *</label>
+                            <textarea required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.0446854889897!2d55.31544931500765!3d25.26934498386127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5d1c8c8c8c8d%3A0x1c8c8c8c8c8c8c8c!2sAl%20Murar%2C%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-en="ALAFKAR ALJADEEDA TRADING LLC" data-ar="شركة الأفكار الجديدة للتجارة">ALAFKAR ALJADEEDA TRADING LLC</h3>
+                <p data-en="Premium wholesale trading in fabrics, clothing, and cosmetics. Licensed by Dubai Department of Economy & Tourism." data-ar="تجارة جملة متميزة في الأقمشة والملابس ومستحضرات التجميل. مرخصة من دائرة الاقتصاد والسياحة بدبي.">
+                    Premium wholesale trading in fabrics, clothing, and cosmetics. Licensed by Dubai Department of Economy & Tourism.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="#about" data-en="About Us" data-ar="من نحن">About Us</a></li>
+                    <li><a href="#activities" data-en="Business Activities" data-ar="أنشطتنا">Business Activities</a></li>
+                    <li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Contact Info" data-ar="معلومات الاتصال">Contact Info</h3>
+                <ul class="footer-links">
+                    <li data-en="Office 206, Alothman Building" data-ar="مكتب 206، مبنى العثمان">Office 206, Alothman Building</li>
+                    <li data-en="Almurar, Dubai, UAE" data-ar="المرر، دبي، الإمارات">Almurar, Dubai, UAE</li>
+                    <li><a href="tel:+97142543299">+971-4254-3299</a></li>
+                    <li data-en="License: 1218525" data-ar="الرخصة: 1218525">License: 1218525</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Legal" data-ar="قانوني">Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#compliance" data-en="Compliance & Governance" data-ar="الامتثال والحوكمة">Compliance & Governance</a></li>
+                    <li data-en="AML/KYC Compliant" data-ar="ملتزم بمكافحة غسيل الأموال">AML/KYC Compliant</li>
+                    <li data-en="Dubai DET Licensed" data-ar="مرخص من دائرة الاقتصاد دبي">Dubai DET Licensed</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-en="© 2024 ALAFKAR ALJADEEDA TRADING LLC. All rights reserved. | License No: 1218525 | Dubai, UAE" data-ar="© 2024 شركة الأفكار الجديدة للتجارة. جميع الحقوق محفوظة. | رقم الرخصة: 1218525 | دبي، الإمارات">
+                © 2024 ALAFKAR ALJADEEDA TRADING LLC. All rights reserved. | License No: 1218525 | Dubai, UAE
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle Function
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            const html = document.documentElement;
+            html.setAttribute('lang', currentLang);
+            html.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-en]').forEach(element => {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = element.getAttribute(`data-${currentLang}`);
+                } else {
+                    element.innerHTML = element.getAttribute(`data-${currentLang}`);
+                }
+            });
+        }
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert(currentLang === 'en' 
+                ? 'Thank you for your message. We will contact you soon!' 
+                : 'شكرًا لرسالتك. سنتواصل معك قريبًا!');
+            this.reset();
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards for animation
+        document.querySelectorAll('.about-card, .activity-card, .service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
